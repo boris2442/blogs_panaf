@@ -76,7 +76,7 @@
                 @enderror
             </form>
         @else
-            <p class="text-gray-500 dark:text-gray-400">Vous devez être connecté pour commenter.</p>
+            <p class="text-gray-500 dark:text-gray-400">Vous devez être <a class="underline text-blue-400" href="{{ route('login') }}">connecté </a> pour commenter.</p>
         @endauth
 
     </div>

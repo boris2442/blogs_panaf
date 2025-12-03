@@ -11,6 +11,7 @@
             @if(auth()->user()->role === 'admin')
                 <a href="{{ route('admin.posts.index') }}" class="hover:underline text-blue-400">Gestion des Posts</a>
                 <a href="{{ route('admin.posts.create') }}" class="hover:underline text-blue-400">Créer un Post</a>
+                <a href="{{ route('admin.users.index') }}" class="hover:underline text-blue-400">Gestion des Utilisateurs</a>
             @endif
         @endauth
     </div>

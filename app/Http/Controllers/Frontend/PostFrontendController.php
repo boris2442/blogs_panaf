@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class PostFrontendController extends Controller
 {
-   // Afficher la liste des articles
+    // Afficher la liste des articles
     public function index()
     {
         // Récupérer les articles avec l'auteur, derniers en premier, pagination 9 par page
@@ -16,7 +16,13 @@ class PostFrontendController extends Controller
 
         return view('pages.posts.frontend.index', compact('posts'));
     }
+    public function home()
+    {
+        // Récupérer les articles avec l'auteur, derniers en premier, pagination 9 par page
+        $posts = Post::with('user')->latest()->paginate(9);
 
+        return view('welcome', compact('posts'));
+    }
     // Afficher un article et ses commentaires
     public function show(Post $post)
     {
