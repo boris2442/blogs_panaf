@@ -49,14 +49,14 @@ class PostController extends Controller
 
         Post::create($data);
 
-        return back()->with('success', 'Article créé avec succès.');
+        return redirect()->route('admin.posts.index')->with('success', 'Article créé avec succès.');
     }
 
-    public function show(Post $post)
-    {
-        $post->load('user', 'comments.user');
-        return view('pages.posts/show', compact('post'));
-    }
+    // public function show(Post $post)
+    // {
+    //     $post->load('user', 'comments.user');
+    //     return view('pages.posts/show', compact('post'));
+    // }
 
     public function edit(Post $post)
     {

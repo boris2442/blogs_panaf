@@ -1,6 +1,8 @@
 <nav class="bg-[var(--primary-blue)] p-4 text-white flex justify-between items-center">
     <div class="flex items-center space-x-4">
         <a href="/" class="font-bold hover:underline text-blue-400">Accueil</a>
+        <a href="{{ route('posts.index') }}" class="font-bold hover:underline text-blue-400">Blogs</a>
+
         @auth
             {{-- <a href="{{ route('dashboard') }}" class="hover:underline">Dashboard</a> --}}
             {{-- <a href="{{ route('profile') }}" class="hover:underline">Profil</a> --}}
